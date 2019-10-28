@@ -103,7 +103,7 @@ export default {
      *      1、获取指定格式的日期信息（在Util.j中封装），同时将loding赋值为true
      *      2、发送请求
      *      3、resolve回调函数（成功请求），保存数据。不保存数据的话，每次请求完成之后会丢失
-     *      4、
+     *      4、请求完成之后，loding设未false
      */
     getRecommend() {
       this.loding = true;
@@ -151,7 +151,9 @@ export default {
      * 步骤：
      *      1、获取list子组件元素
      *      2、在daily或加载每日推荐列表时停止操作
-     *      3、以滚动的距离加list页面高度>=整个内容区域高度时则视为触及底部
+     *      3、以滚动的距离+list页面高度>=整个内容区域高度时则视为触及底部
+     * 书上写的滚动的距离加上body的距离，但经测试不对，因为此时body还没有被内容撑起来，高度十分小，这个数值加下来是不对的，
+     * 个人认为应该加list div 的高度
      */
     handleScroll() {
       const list = this.$refs.list;
