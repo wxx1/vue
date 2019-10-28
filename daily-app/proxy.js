@@ -44,5 +44,5 @@ http
         })
     })
     .listen(imgPort, () => {
-        console.log('图片代理运行在12.0.0.1:3001')
+        console.log('图片代理运行在127.0.0.1:3001')
     })
