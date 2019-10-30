@@ -24,6 +24,9 @@ export default {
       product: null
     };
   },
+  /**
+   * mounted不要写具体实现代码，具体实现代码建议在methods中写，要有良好封装思想
+   */
   mounted() {
     this.getProduct();
   },

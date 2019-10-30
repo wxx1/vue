@@ -2,6 +2,7 @@
   <div class="list">
     <div class="list-control">
       <div class="list-control-order">
+        <!-- 根据品牌、颜色过滤 -->
         <div class="list-control-filter">
           <span>品牌：</span>
           <span
@@ -23,6 +24,7 @@
           >{{color}}</span>
         </div>
 
+      <!-- 根据价格和销量排序 -->
         <span>排序：</span>
         <span
           class="list-control-order-item"
@@ -43,6 +45,8 @@
         <template v-if="order === 'cost-asc'">↑</template>
       </div>
     </div>
+
+    <!-- 商品显示区域 -->
     <div class="list-product" v-if="productList.length">
       <product-item 
         v-for="item in filteredAndOrderList" 

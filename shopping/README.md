@@ -1,4 +1,4 @@
-# shopping
+# shopping 详细注释
 
 ## 安装项目依赖
 ```
@@ -20,4 +20,7 @@ npm run serve
 
 ### 商品详情页
 ![项目布局](./src/assets/images/detail.png)
+
+### 购物车
+![项目布局](./src/assets/images/cart.png)
 

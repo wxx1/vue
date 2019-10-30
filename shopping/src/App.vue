@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- 该部分始终存在 -->
     <div class="header">
       <router-link to="/list" 
                   class="header-title">电商网站示例</router-link>
@@ -10,7 +11,7 @@
         </router-link>
       </div>
     </div>
-
+  <!-- 根据路由不同，显示不同 -->
     <router-view />
   </div>
 </template>

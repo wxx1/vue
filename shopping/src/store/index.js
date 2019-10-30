@@ -40,7 +40,26 @@ export default new Vuex.Store({
     },
     //向商品列表中添加数据——加入购物车
     addCart(state,productId){
-      state.cartList.push(productId)
+      //判断购物车是否已有，如果有，数量加1
+      const isAdded = state.cartList.find(item => item.id === productId)
+      if(isAdded){
+        isAdded.count++
+      }else{
+        state.cartList.push({
+          id:productId,
+          count:1
+        })
+      }
+    },
+    //修改商品数量
+    editCartCount(state,payload){
+      const product = state.cartList.find(item => item.id===payload.id)
+      product.count+=payload.count
+    },
+    //删除购物车中商品
+    deleteCart(state,payload){
+      const index = state.cartList.findIndex(item => item.id === payload.id)
+      state.cartList.splice(index,1)
     }
   },
 
@@ -59,8 +78,5 @@ export default new Vuex.Store({
         console.log('请求成功')
       }, 500)
     }
-  },
-  
-  modules: {
   }
 })
