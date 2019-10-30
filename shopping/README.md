@@ -12,3 +12,12 @@ npm run serve
 
 ### 使用vue核心+vue-router+vuex+vue-cil3构建该项目
 
+### 该项目目前为可用版本，自己在网上找到数据，测试可用
+
+## 运行效果
+### 主页
+![项目布局](./src/assets/images/list.png)
+
+### 商品详情页
+![项目布局](./src/assets/images/detail.png)
+
